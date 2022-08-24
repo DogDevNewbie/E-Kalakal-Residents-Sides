@@ -89,7 +89,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProfileInformation(),
+                          ),
+                        );
+                      },
                       icon: const Icon(Icons.person),
                       label: const Text('Profile Information'),
                       style: TextButton.styleFrom(
@@ -100,9 +107,16 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                     ),
                     TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ChangePassword(),
+                          ),
+                        );
+                      },
                       icon: const Icon(Icons.security),
-                      label: const Text('Security and Login'),
+                      label: const Text('Change Password'),
                       style: TextButton.styleFrom(
                         textStyle: const TextStyle(
                           fontSize: 18,
@@ -128,7 +142,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       style: TextButton.styleFrom(
                         textStyle: const TextStyle(
                           fontSize: 18,
-                          //  inherit: false,
+                          inherit: false,
                         ),
                       ),
                     ),
